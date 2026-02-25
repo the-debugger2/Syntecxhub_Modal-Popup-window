@@ -3,6 +3,9 @@
 A responsive and animated modal (popup window) built using HTML, CSS, and JavaScript.
 The project demonstrates how to create a modal with an overlay background, smooth animations, and dynamic open/close functionality.
 
+## 🌀 Live Demo
+> https://the-debugger2.github.io/Syntecxhub_Modal-Popup-window/
+
 ## 🚀 Features
 
 ✅ Button-triggered modal popup
@@ -19,11 +22,11 @@ The project demonstrates how to create a modal with an overlay background, smoot
 
 ## 🛠️ Technologies Used
 
-HTML5 – Structure
+- HTML5 – Structure
 
-CSS3 – Styling and animations
+- CSS3 – Styling and animations
 
-JavaScript (Vanilla JS) – Modal functionality
+- JavaScript (Vanilla JS) – Modal functionality
 
 ## 📂 Project Structure
 Modal-Popup-Project/
@@ -37,7 +40,7 @@ Modal-Popup-Project/
 
 When the button is clicked, JavaScript adds a CSS class to display the modal with animation.
 
-function openModal() {
+- function openModal() {
     overlay.classList.add("show");
 }
 2. Close Modal
@@ -48,7 +51,7 @@ Clicking the close (×) button
 
 Clicking outside the modal (overlay)
 
-function closeModal() {
+- function closeModal() {
     overlay.classList.remove("show");
 }
 3. Smooth Animation
@@ -63,13 +66,13 @@ transform
 
 Example:
 
-.payment-container {
+- .payment-container {
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease;
 }
 
-.payment-container.show {
+- .payment-container.show {
     opacity: 1;
     visibility: visible;
 }
@@ -78,15 +81,15 @@ This creates a smooth fade and scale effect.
 
 ## 🖥️ Modal Features
 
--Dark transparent overlay background
+- Dark transparent overlay background
 
--Centered popup window
+- Centered popup window
 
--Embedded form
+- Embedded form
 
--Styled inputs and button
+- Styled inputs and button
 
--Smooth scale animation
+- Smooth scale animation
 
 ## 📱 Responsiveness
 
@@ -100,13 +103,13 @@ to ensure it adjusts properly on mobile devices.
 
 This project helps practice:
 
--DOM manipulation
+- DOM manipulation
 
--Event handling
+- Event handling
 
--CSS transitions & animations
+- CSS transitions & animations
 
--Overlay layering with z-index
+- Overlay layering with z-index
 
--Preventing event bubbling (event.stopPropagation())
+- Preventing event bubbling (event.stopPropagation())
 
