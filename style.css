@@ -1,0 +1,221 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.header {
+    height: 20%;
+    background-color: #004554;
+    line-height: 120px;
+}
+
+.header h1 {
+    display: flex;
+    justify-content: center;
+    color: #E9F1F9;
+}
+
+.main {
+    background-color: #D3D0C8;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    flex-direction: column;
+}
+
+.main h2 {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.pop-up-btn {
+    color: #E9F1F9;
+    background-color: #44A6B5;
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    font-size: x-large;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 16px;
+    border-left: 5px #23555d solid;
+    border-bottom: 3px #23555d solid;
+    border-right: 1px #23555d solid;
+    border-top: 1px #23555d solid;
+}
+
+.pop-up-btn:hover {
+    background-color: #50b5da;
+    color: rgb(31, 31, 31);
+    cursor: pointer;
+}
+
+.payment-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibilty 0.3s ease;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.75);
+}
+
+.payment-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.payment-content {
+    backdrop-filter: blur(100px);
+    padding: 20px;
+    margin: 80px auto;
+    height: 88%;
+    width: 88%;
+    border-radius: 60px;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.payment-container.show .payment-content {
+    transform: scale(1);
+}
+
+.payment-form {
+    background-color: #D3D0C8;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    border: 1px black solid;
+    border-radius: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.payment-form h2 {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.6s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #50b5da;
+    box-shadow: 0 0 5px #23555d;
+}
+
+.btn-pay {
+    background-color: #44A6B5;
+    color: #E9F1F9;
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    font-size: x-large;
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 16px;
+    border-left: 5px #23555d solid;
+    border-bottom: 3px #23555d solid;
+    border-right: 1px #23555d solid;
+    border-top: 1px #23555d solid;
+    transition: 0.3s ease;
+    margin-left: 30%;
+}
+
+.btn-pay:hover {
+    background-color: #50b5da;
+    color: rgb(31, 31, 31);
+    cursor: pointer;
+}
+
+.btn-Cancel {
+    background-color: #50b5da;
+    width: 5%;
+    border-radius: 32px;
+    float: right;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 90%;
+    margin-bottom: 30px;
+}
+
+.btn-Cancel:hover {
+    color: rgb(187, 0, 0);
+    background-color: #E9F1F9;
+}
+
+.footer {
+    background-color: #004554;
+    color: #E9F1F9;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    line-height: 60px;
+}
+
+@media (max-width: 768px) {
+    .btn-pay {
+        margin-left: 20%;
+        margin-right: 40%;
+    }
+    .btn-Cancel {
+        background-color: #50b5da;
+        width: 10%;
+        border-radius: 32px;
+        float: right;
+        font-size: x-large;
+        font-weight: bold;
+        margin-left: 90%;
+        margin-bottom: 30px;
+    }
+    .payment-form h2 {
+        margin-left: 5%;
+    }
+}
